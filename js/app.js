@@ -8,7 +8,7 @@ document.getElementById('añadir').addEventListener('click', function() {
         card.className = 'card';
         card.innerHTML = `
             <img src="${imagenUrl}" alt="${title}">
-            <h3 ondblclick="editartitulo(this)">✎</h3>
+            <h3 ondblclick="editartitulo(this)">${title}</h3>
             <p ondblclick="editardescrip(this)">${description}</p>
             <button onclick="eliminar(this)">eliminar</button>
         `;
@@ -37,5 +37,6 @@ function editardescrip(element) {
 }
 
 function eliminar(element) {
+
     element.parentElement.remove();
 }
