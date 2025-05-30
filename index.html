@@ -3,20 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Tarjetas de Producto</title>
+    <title>Gestión de Tarjetas</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/app.js" defer></script>
 </head>
 <body>
     <div class="container">
-        <h1>Gestión de Tarjetas de Producto</h1>
-        <div class="form">
-            <input type="text" id="cardTitle" placeholder="Título del producto" required>
-            <input type="text" id="cardDescription" placeholder="Descripción del producto" required>
-            <input type="text" id="cardImageUrl" placeholder="URL de la imagen" required>
-            <button id="addCardButton">+</button>
+        <h1>Gestión de Tarjetas</h1>
+        <div class="formulario">
+            <input type="text" id="card-titulo" placeholder="Título del producto" required>            
+            <input type="text" id="card-descripcion" placeholder="Descripción del producto" required>
+            <input type="text" id="card-url" placeholder="URL de la imagen" required>
+            <button id="añadir">Añadir</button>
         </div>
-        <div id="cardContainer" class="card-container"></div>
+        <div id="cardContainer" class="card-contenedor">
+            
+        </div>
     </div>
-    <script src="js/app.js"></script>
+    
 </body>
 </html>
