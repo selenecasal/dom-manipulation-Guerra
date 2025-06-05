@@ -1,0 +1,18 @@
+.tarjeta img{
+    width: 100%;
+    height: auto;
+}
+.tarjeta {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 200px;
+    padding: 10px;
+    margin: 10px;
+    border: black 1px solid;
+    border-radius: 8px;
+    background-color: aqua;
+}
+.card-contenedor-tarjetas{
+    display: flex;
+}
