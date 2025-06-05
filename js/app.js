@@ -1,42 +1,31 @@
-document.getElementById('añadir').addEventListener('click', function() {
-    const title = document.getElementById('card-titulo').value;
-    const description = document.getElementById('card-descripcion').value;
-    const imagenUrl = document.getElementById('card-url').value;
+document.getElementById('boton-agregar-tarjeta').addEventListener('click', function() {
+    cont=0;
+    while(cont < 5) {
+        cont++;
+        const br = document.createElement('br');
+        document.getElementById('contenedor-tarjetas').appendChild(br);
 
-    if (title && description && imagenUrl) {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-            <img src="${imagenUrl}" alt="${title}">
-            <h3 ondblclick="editartitulo(this)">${title}</h3>
-            <p ondblclick="editardescrip(this)">${description}</p>
-            <button onclick="eliminar(this)">eliminar</button>
-        `;
-        document.getElementById('cardContainer').appendChild(card);
-
-        document.getElementById('card-titulo').value = '';
-        document.getElementById('card-descripcion').value = '';
-        document.getElementById('card-url').value = '';
-    } else {
-        alert("Por favor, completa todos los campos.");
     }
+    cont++;
+  const nuevaTarjeta = document.createElement('div');
+  nuevaTarjeta.className = 'tarjeta';
+  const titulo= document.createElement('h2');
+  titulo.setAttribute('contenteditable', 'true');
+  titulo.textContent = 'Título de la Tarjeta';
+  nuevaTarjeta.appendChild(titulo);
+  const imagen = document.createElement('img');
+  imagen.setAttribute('src', 'https://images.pagina12.com.ar/styles/focal_16_9_960x540/public/2021-12/296121-gato-andino-_0.jpg?h=ada05aa9&itok=D8n8mdev');
+  nuevaTarjeta.appendChild(imagen);
+  const descripcion = document.createElement('p');
+  descripcion.setAttribute('contenteditable', 'true');
+  descripcion.textContent = 'Descripción de la Tarjeta';
+  nuevaTarjeta.appendChild(descripcion);
+  const botonEliminar = document.createElement('button');
+  botonEliminar.textContent = 'X';
+  nuevaTarjeta.appendChild(botonEliminar)
+  
+  document.getElementById('contenedor-tarjetas').appendChild(nuevaTarjeta);    
+    botonEliminar.addEventListener('click', function() {
+        nuevaTarjeta.remove();
+    });
 });
-
-function editartitulo(element) {
-    const nuevotitulo = prompt("Edita el título:", element.innerText);
-    if (nuevotitulo) {
-        element.innerText = nuevotitulo;
-    }
-}
-
-function editardescrip(element) {
-    const nuevadesp = prompt("Edita la descripción:", element.innerText);
-    if (nuevadesp) {
-        element.innerText = nuevadesp;
-    }
-}
-
-function eliminar(element) {
-
-    element.parentElement.remove();
-}
