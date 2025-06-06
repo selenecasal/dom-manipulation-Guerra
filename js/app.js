@@ -24,6 +24,5 @@ document.getElementById('boton-agregar-tarjeta').addEventListener('click', funct
 
   botonEliminar.addEventListener('click', function() {
     nuevaTarjeta.remove();
-    cont--;
   });
 });
