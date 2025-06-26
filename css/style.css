@@ -11,9 +11,17 @@
     margin: 10px;
     border: black 1px solid;
     border-radius: 8px;
-    background-color: aqua;
+    background-color: rgba(61, 0, 0, 0.791);
+}
+h2,p{
+    color: white;
+    font-style:oblique;
 }
 .card-contenedor-tarjetas{
     display: flex;
     flex-wrap: wrap;
+}
+body{
+    background-color: rgb(159, 126, 126);
+
 }
