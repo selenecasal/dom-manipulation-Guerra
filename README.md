@@ -3,6 +3,7 @@
 Selene Guerra ||
 Ibarguren Jeremias ||
 Alan Sagrario
+# 
 # Gestión de Tarjetas de Producto
 Esta es una mini-aplicación que deja crear, editar y eliminar tarjetas de producto usando JavaScript para manipular el DOM.
 #
